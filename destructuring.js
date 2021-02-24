@@ -22,6 +22,10 @@ var carDetails = {
 */
 
 //Code Here
+ const {color} = carDetails
+ const {make} = carDetails
+ const {model} = carDetails
+ const {year} = carDetails
 
 
 
@@ -35,6 +39,9 @@ var carDetails = {
 
 function greeting( obj ) {
   //Code Here
+  const {title} = obj
+  const {firstName} = obj
+  const {lastName} = obj
   
   // Do not edit the code below.
   return 'Hello, ' + title + ' ' + firstName + ' ' + lastName + '!';
@@ -54,7 +61,13 @@ function greeting( obj ) {
 */
 
 //Code Here
-
+function totalPopulation(object) {
+  const {utah} = object;
+  const {california} = object;
+  const {texas} = object;
+  const {arizona} = object;
+  return utah + california + texas + arizona
+}
 
 
 ////////// PROBLEM 4 //////////
@@ -69,12 +82,25 @@ function greeting( obj ) {
 
 //Code Here
 
+function ingredients(object) {
+
+  let newArray = []
+
+  const {carb} = object;
+  const {fat} = object;
+  const {protein} = object;
+  newArray.push(carb);
+  newArray.push(fat);
+  newArray.push(protein);
+  return newArray
+}
 
 
 ////////// PROBLEM 5 //////////
 
 /*
-  Now we will use object destructuring as the function's parameter instead of destructuring the object inside of the function declaration.
+  Now we will use object destructuring as the function's parameter instead of 
+  destructuring the object inside of the function declaration.
   Example:
     function example( {one, two, three} ) {
       return one + two + three
@@ -86,6 +112,19 @@ function greeting( obj ) {
 */
 
 //Code Here
+function largeNumbers(destructuredObj) {
+  const {first} = destructuredObj;
+  const {second} = destructuredObj;
+  const {third} = destructuredObj;
+  if(first < second && first < third){
+    return first
+  } else if(second < first && second < third){
+    return second
+  } else if(third < second && third < first){
+    return third
+  }
+ 
+}
 
 
 
@@ -98,5 +137,16 @@ function greeting( obj ) {
 */
 
 //Code Here
-
+function numberGroups(desObj){
+  const {a} = desObj;
+  const {b} = desObj;
+  const {c} = desObj;
+  if (a.length > b.length && a.length > c.length){
+    return a
+  } else if (b.length > a.length && b.length > c.length){
+    return b
+  } else if (c.length > a.length && c.length > b.length){
+    return c
+  }
+}
 
